@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+
+require 'rubygems'
+require 'bundler/setup'
+require 'curb'
+
+curl = Curl::Easy.new("https://www.adobe.com")
+curl.on_debug {}
+curl.send("http_head")

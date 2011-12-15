@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+
+require 'curb'
+
+curl = Curl::Easy.new("https://www.adobe.com")
+curl.on_debug { raise "error" }
+curl.send("http_head")
